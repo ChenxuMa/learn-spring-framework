@@ -1,9 +1,14 @@
 package com.in28minutes.spring.learnspringframework.game;
 
-public class GameRunner {
-    private SuperContraGame game;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-    public GameRunner(SuperContraGame game) {
+@Component
+public class GameRunner {
+    @Autowired
+    private GamingConsole game;
+
+    public GameRunner(GamingConsole game) {
         this.game=game;
     }
 
